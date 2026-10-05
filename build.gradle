@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.5.0'
+    }
+}
+
+allprojects {
+    buildDir = "C:/tmp/petly_build/${project.name}"
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.layout.buildDirectory
+}
